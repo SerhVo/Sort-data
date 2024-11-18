@@ -180,9 +180,12 @@ function renderList(items) {
   items.forEach((item) => {
     const li = document.createElement("li");
     li.innerHTML = `
+    <div class="card">
       <div class="text">${item.name}</div>
       <div>цена: ${getPrice(item)} грн</div>
-      <div>${parseNumber(item.ratingRevievs)} отзывов</div>`;
+      <div>${parseNumber(item.ratingRevievs)} отзывов</div>
+      </div>
+      `;
     resultContainer.appendChild(li);
   });
 }
